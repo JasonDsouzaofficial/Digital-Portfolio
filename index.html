@@ -25,8 +25,9 @@
       </nav>
       <section class='heroSection'>
         <img 
-        class='profileImage'
-        src='images/Jason.jpg'/>
+          class='profileImage'
+          src='images/Jason.jpg'
+          id='slideshowImage'/>
         <div class='herosectionDetails'>
           <h1>Jason Austin D'souza</h1>
           <h3> Undergraduate Student & General Secretary - TSEC</h3>
@@ -35,6 +36,31 @@
           <h3> Actor, Dancer & Artist</h3>
         </div>
       </section>
+      
+      <script>
+        // List of image URLs for the slideshow
+        var imageUrls = [
+          'images/Jason.jpg',
+          'images/Jason1.jpg',
+          'images/Jason2.jpg',
+          'images/Jason3.jpg',
+          'images/Jason4.jpg'
+        ];
+      
+        var currentIndex = 0;
+        var slideshowImage = document.getElementById('slideshowImage');
+      
+        function changeImage() {
+          // Increment the index to move to the next image
+          currentIndex = (currentIndex + 1) % imageUrls.length;
+      
+          // Change the src attribute of the image
+          slideshowImage.src = imageUrls[currentIndex];
+        }
+      
+        // Call the changeImage function every 5 seconds (5000 milliseconds)
+        setInterval(changeImage, 5000);
+      </script>
       <section class='aboutMe' id='aboutMe'>
         <h1>About Me</h1>
         <p>I'm currently pursuing I.T. engineering in TSEC & also a senior division naval NCC Leading cadet. Always ready to take charge and lead, hardworking, ready-to-learn, can work under pressure, highly disciplined, organized and systematic way of working. Eager to explore new fields of interest. Skilled in public speaking, drawing, anchoring, drama, theatre, acting and sports. Passionate about defence, automobile and space field. Aspiring to bring about a change in the country and living up to my life's motto - "Born for greater things".</p>
